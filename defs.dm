@@ -2,8 +2,6 @@
 	These are simple defaults for your project.
  */
 
-#define WORLD_ICON_SIZE 32
-#define LIGHT_PLANE 2
 
 world
 	fps = 30		// 30 frames per second
@@ -22,8 +20,6 @@ obj
 	step_size = 4
 
 
-var/list/cardinal = list(NORTH, SOUTH, EAST, WEST)
-
 // -- The mob
 /mob/player
 	icon = 'icons/mob.dmi'
@@ -35,7 +31,7 @@ var/list/cardinal = list(NORTH, SOUTH, EAST, WEST)
 
 /mob/player/verb/animation()
 	set name = "Animate"
-	animate(src, alpha = initial(alpha) - rand(100, 200), time = 2, loop = -1, easing = LINEAR_EASING)
+	animate(src, alpha = initial(alpha) - rand(100, 200), time = 6, loop = 10, easing = LINEAR_EASING)
 
 // -- The turfs
 /turf/wall
